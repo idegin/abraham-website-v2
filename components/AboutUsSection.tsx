@@ -2,109 +2,55 @@ import React from 'react'
 
 export default function AboutUsSection() {
     return (
-       <section className="hzAccordion-area pt-130 pb-130">
-            <div className="container">
-                <div className="section-header mb-60">
-                    <h2 className="wow splt-txt text-white" data-splitting>Our Services</h2>
+        <>
+            <section className="about-six-area">
+                <div className="about-six__bg">
+                    <img src="images/bg/about-six-bg.png" alt="image"/>
                 </div>
-                <div className="hzAccordion__wrp">
-                    <div className="hzAccordion__item active wow fadeInLeft" data-wow-delay="00ms"
-                        data-wow-duration="1500ms">
-                        <div className="head">
-                            <h3 className="head-title"><span className="title">Organizational Culture & Leadership
-                                    Alignment</span> <span className="number">01</span></h3>
-                        </div>
-                        <div className="content">
-                            <div className="wrp">
-                                <div className="content-wrp">
-                                    <p className="text">We develop customized strategies that incorporate tactics proven to
-                                        deliver
-                                        outstanding results testing.</p>
-                                    <a className="arry-btn" href="page-service-details.html"><i
-                                            className="fa-thin fa-arrow-up-right"></i></a>
-                                </div>
-                                <div className="shape">
-                                    <img src="images/shape/hz-accordion-shape.png" alt="shape"/>
-                                </div>
-                                <div className="image">
-                                    <img src="images/service/service-one-image1.jpg" alt="image"/>
+                <div className="container">
+                    <div className="about-six__wrp">
+                        <div className="row g-0 align-items-center">
+                            <div className="col-lg-6">
+                                <div className="about-six__image">
+                                    <img className="bounceInLeft wow animation__arryLeftRight"
+                                        src="images/about/about-six-image.png" alt="image"/>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="hzAccordion__item wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div className="head">
-                            <h3 className="head-title"><span className="title">Strategic Planning & Development</span> <span
-                                    className="number">02</span></h3>
-                        </div>
-                        <div className="content">
-                            <div className="wrp">
-                                <div className="content-wrp">
-                                    <p className="text">We develop customized strategies that incorporate tactics proven to
-                                        deliver
-                                        outstanding results testing.</p>
-                                    <a className="arry-btn" href="page-service-details.html"><i
-                                            className="fa-thin fa-arrow-up-right"></i></a>
-                                </div>
-                                <div className="shape">
-                                    <img src="images/shape/hz-accordion-shape.png" alt="shape"/>
-                                </div>
-                                <div className="image">
-                                    <img src="images/service/service-one-image2.jpg" alt="image"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="hzAccordion__item wow fadeInLeft" data-wow-delay="400ms" data-wow-duration="1500ms">
-                        <div className="head">
-                            <h3 className="head-title"><span className="title">Operational Efficiency Optimization</span> <span
-                                    className="number">03</span></h3>
-                        </div>
-                        <div className="content">
-                            <div className="wrp">
-                                <div className="content-wrp">
-                                    <p className="text">We develop customized strategies that incorporate tactics proven to
-                                        deliver
-                                        outstanding results testing.</p>
-                                    <a className="arry-btn" href="page-service-details.html"><i
-                                            className="fa-thin fa-arrow-up-right"></i></a>
-                                </div>
-                                <div className="shape">
-                                    <img src="images/shape/hz-accordion-shape.png" alt="shape"/>
-                                </div>
-                                <div className="image">
-                                    <img src="images/service/service-one-image3.jpg" alt="image"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="hzAccordion__item last-child wow fadeInLeft" data-wow-delay="600ms"
-                        data-wow-duration="1500ms">
-                        <div className="head">
-                            <h3 className="head-title"><span className="title">Tailored Consulting Solutions &
-                                    Advisory
-                                    Services</span> <span className="number">04</span></h3>
-                        </div>
-                        <div className="content">
-                            <div className="wrp">
-                                <div className="content-wrp">
-                                    <p className="text">We develop customized strategies that incorporate tactics proven to
-                                        deliver
-                                        outstanding results testing.</p>
-                                    <a className="arry-btn" href="page-service-details.html"><i
-                                            className="fa-thin fa-arrow-up-right"></i></a>
-                                </div>
-                                <div className="shape">
-                                    <img src="images/shape/hz-accordion-shape.png" alt="shape"/>
-                                </div>
-                                <div className="image">
-                                    <img src="images/service/service-one-image4.jpg" alt="image"/>
+                            <div className="col-lg-6">
+                                <div className="about-six__item">
+                                    <div className="section-header">
+                                        <h6>About STRATIFY</h6>
+                                        <h2 className="wow splt-txt" data-splitting>Experts in Providing Investment
+                                            Consulting Services</h2>
+                                        <p>At Stratify Business Consulting, we have built a network of dedicated
+                                            professionals
+                                            (consultants, analysts, strategists, and industry experts) who are passionate
+                                            about
+                                            delivering exceptional business solutions in an innovative</p>
+                                    </div>
+                                    <p className="text">Our culture fosters and strives for innovation, creativity, and business
+                                        expertise,
+                                        with a strong client-cantered focus. Every day, we cultivate an entrepreneurial
+                                        environment that is both flexible and supportive.</p>
+                                    <p className="text">{`Call us 24/7. Let’s start fighting together.`}</p>
+                                    <h4 className="number">
+                                        <a href="tel:3333-000-000" className="hover-link">3333-000-000</a>
+                                        <span>Or</span>
+                                        <a href="tel:3333-000-000" className="hover-link">3333-000-000</a>
+                                    </h4>
+                                    <div className="info">
+                                        <img src="images/about/about-six-sing.png" alt="sing-image" />
+                                        <div>
+                                            <h6>Harry Oliver,</h6>
+                                            <p>CEO of Stratify Business Consulting</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     )
 }

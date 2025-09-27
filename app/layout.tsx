@@ -3,10 +3,11 @@ import Script from "next/script";
 import "./globals.css";
 import TopHeader from "@/components/TopHeader";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Stratify - Business Consulting",
-  description: "Business Consulting HTML Template",
+  title: "Briie Consulting",
+  description: `Briie Consulting is a premier management consulting firm dedicated to delivering exceptional strategic solutions and driving transformative growth for our clients.`,
 };
 
 export default function RootLayout({
@@ -29,12 +30,12 @@ export default function RootLayout({
         <link rel="stylesheet" href="/css/style.css" />
       </head>
       <body>
-        <TopHeader />
+        {/* <TopHeader /> */}
         <Header />
         <main>
           {children}
         </main>
-
+        <Footer/>
         <Script src="/js/jquery-3.7.1.min.js" strategy="beforeInteractive" />
         <Script src="/js/bootstrap.min.js" strategy="afterInteractive" />
         <Script src="/js/meanmenu.js" strategy="afterInteractive" />
