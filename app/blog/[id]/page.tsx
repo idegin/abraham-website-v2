@@ -109,7 +109,7 @@ function CommentSection() {
         </div>
     );
 }
-// used props for comment data
+
 function Comment({ image, name, text }: { image: string; name: string; text: string }) {
     return (
         <div className="comment-one__single">
