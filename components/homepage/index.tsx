@@ -20,15 +20,13 @@ export default function HomePageMain({
 }: HomePageMainProps) {
     useTemplateScripts();
 
-    console.log(services, blogPosts);
-
     return (
         <>
             <HeroSection />
             <AboutUsSection />
             <WhyChooseUs />
-            <OurServices />
-            <HomeBlogSection />
+            <OurServices services={services} />
+            <HomeBlogSection blogPosts={blogPosts} />
             <OurClients />
             {/* <FAQ /> */}
         </>

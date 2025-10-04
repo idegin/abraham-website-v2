@@ -16,10 +16,18 @@ export const getServices = async (client: prismic.Client<AllDocumentTypes>, page
                 }
             }`
         });
-        return services.results;
+        return {
+            services: services.results,
+            totalPages: services.total_pages,
+            currentPage: services.page,
+        };
     } catch (error) {
         console.error('Error fetching services:', error);
-        return [];
+        return {
+            services: [],
+            totalPages: 0,
+            currentPage: 0,
+        };
     }
 };
 

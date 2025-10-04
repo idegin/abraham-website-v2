@@ -1,21 +1,18 @@
 import HomePageMain from "@/components/homepage";
+import { getBlogPosts } from "@/utils/queries/blog.query";
+import { getServices } from "@/utils/queries/services.query";
 import { createClient } from "@/prismicio";
 import React from "react";
 
 const page = async () => {
     const client = createClient();
-    const all = Promise.all([
-        client.getByType("services"),
-        client.getByType("blog_posts"),
-    ]);
+    const all = Promise.all([getServices(client), getBlogPosts(client, 4, 1)]);
     const [services, blogPosts] = await all;
-
-    console.log(services, blogPosts);
 
     return (
         <HomePageMain
-            services={services.results}
-            blogPosts={blogPosts.results}
+            services={services.services}
+            blogPosts={blogPosts.blogPosts}
         />
     );
 };

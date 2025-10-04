@@ -55,6 +55,13 @@
                 "placeholder": ""
               }
             },
+            "subtitle": {
+              "type": "Text",
+              "config": {
+                "label": "Subtitle",
+                "placeholder": ""
+              }
+            },
             "description": {
               "type": "Text",
               "config": {

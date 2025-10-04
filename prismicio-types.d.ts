@@ -276,6 +276,16 @@ export interface ServicesDocumentDataSubServicesItem {
   title: prismic.KeyTextField;
 
   /**
+   * Subtitle field in *Services → Sub services*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services.sub_services[].subtitle
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
    * Description field in *Services → Sub services*
    *
    * - **Field Type**: Text

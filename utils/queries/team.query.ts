@@ -1,10 +1,13 @@
 import * as prismic from '@prismicio/client';
 import { AllDocumentTypes } from '@/prismicio-types';
 
-export const getTeams = async (client: prismic.Client<AllDocumentTypes>) =>
+export const getTeams = async (client: prismic.Client<AllDocumentTypes>, pageSize?: number, currentPage?: number) =>
 {
     try {
-        const teams = await client.getByType('team');
+        const teams = await client.getByType('team', {
+            pageSize,
+            page: currentPage,
+        });
         return teams.results;
     } catch (error) {
         console.error('Error fetching teams:', error);

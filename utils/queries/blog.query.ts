@@ -1,11 +1,13 @@
 import * as prismic from '@prismicio/client';
-import { AllDocumentTypes } from '@/prismicio-types';
+import { AllDocumentTypes, BlogPostsDocument } from '@/prismicio-types';
+import moment from 'moment';
 
 
 export const getBlogPosts = async (client: prismic.Client<AllDocumentTypes>, pageSize?: number, currentPage?: number) =>
 {
     try {
         const blogPosts = await client.getByType('blog_posts', {
+            fetchLinks: [ 'author.name', 'categories.title' ],
             pageSize,
             page: currentPage,
             graphQuery: `{
@@ -38,12 +40,14 @@ export const getBlogPosts = async (client: prismic.Client<AllDocumentTypes>, pag
 export const getBlogPostBySlug = async (client: prismic.Client<AllDocumentTypes>, slug: string) =>
 {
     try {
-        const blogPost = await client.getByUID('blog_posts', slug);
+        const blogPost = await client.getByUID('blog_posts', slug, {
+            fetchLinks: [ 'author.name', 'categories.title' ],
+        });
 
         const allCategories = await client.getByType('categories');
 
         const relatedPosts = await client.getByType('blog_posts', {
-            fetchLinks: [ 'author.name', 'category.title' ],
+            fetchLinks: [ 'author.name', 'categories.title' ],
             pageSize: 3,
             // @ts-ignore
             filters: [ prismic.filter.at("my.blog_posts.category", blogPost.data.category.uid) ],
@@ -58,10 +62,61 @@ export const getBlogPostBySlug = async (client: prismic.Client<AllDocumentTypes>
             }`
         });
 
+        const dateBefore = moment(blogPost.first_publication_date).format("YYYY-MM-DD");
+        const dateAfter = moment(blogPost.first_publication_date).format("YYYY-MM-DD");
+
+        let previousPost;
+        let nextPost;
+
+        try {
+            previousPost = await client.getByType('blog_posts', {
+                fetchLinks: [ 'author.name', 'category.title' ],
+                pageSize: 1,
+                // @ts-ignore
+                filters: [ prismic.filter.dateBefore("document.first_publication_date", blogPost.first_publication_date) ],
+                graphQuery: `{
+                    blog_posts {
+                        title
+                        featured_image
+                        excerpt
+                        author
+                        category
+                    }
+                }`
+            });
+        } catch (error) {
+            console.error('Error fetching previous post:', error);
+
+        }
+        try {
+            nextPost = await client.getByType('blog_posts', {
+                fetchLinks: [ 'author.name', 'category.title' ],
+                pageSize: 1,
+                // @ts-ignore
+                filters: [ prismic.filter.dateAfter("document.first_publication_date", blogPost.first_publication_date) ],
+                graphQuery: `{
+                    blog_posts {
+                        title
+                        featured_image
+                        excerpt
+                        author
+                        category
+                    }
+                }`
+            });
+        } catch (error) {
+            console.error('Error fetching next post:', error);
+        }
+
+
+
+
         return {
             blogPost,
             categories: allCategories.results,
             relatedPosts: relatedPosts.results,
+            previousPost: previousPost?.results[ 0 ],
+            nextPost: nextPost?.results[ 0 ],
         };
     } catch (error) {
         console.error('Error fetching blog post by slug:', error);
