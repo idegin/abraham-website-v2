@@ -9,7 +9,7 @@ export default function Footer({}: Props) {
         <div className="container">
             <div className="footer-two__wrp">
                 <div className="footer-two__top">
-                    <h2 className="title"><a href="contact.html">Get in Touch<i className="fa-thin fa-arrow-up-right"></i></a>
+                    <h2 className="title"><a href="/contact">Get in Touch<i className="fa-thin fa-arrow-up-right"></i></a>
                     </h2>
                 </div>
                 <div className="footer-two__item-wrp">

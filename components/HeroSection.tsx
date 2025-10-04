@@ -12,7 +12,7 @@ export default function HeroSection() {
                             <h6 className='title'>
                                 At Briie our purpose is succintly captured in one powerful phrase<br/> <strong><i>"Providing simple solutions to complex problems"</i></strong>
                             </h6>
-                        <a href="page-about.html" className="arry-btn"><i className="fa-thin fa-arrow-right wow fadeInLeft"
+                        <a href="/contact" className="arry-btn"><i className="fa-thin fa-arrow-right wow fadeInLeft"
                             data-wow-delay="500ms" data-wow-duration="1500ms"></i></a>
                     </div>
                 </div>
