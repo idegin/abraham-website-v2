@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function WhyChooseUs() {
@@ -6,8 +7,8 @@ export default function WhyChooseUs() {
             <div className="container">
                 <div className="feature-two__wrp">
                     <div className="section-header text-center mb-50">
-                        <h6>OUR SPECIALIZE</h6>
-                        <h2 className="wow splt-txt" data-splitting>Complete Features</h2>
+                        {/* <h6>OUR SPECIALIZE</h6> */}
+                        <h2 className="wow splt-txt" data-splitting>Why Choose Briie</h2>
                     </div>
                     <div className="row g-4">
                         <div className="col-lg-6 col-xl-4 wow fadeInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
@@ -34,15 +35,18 @@ export default function WhyChooseUs() {
                                     </svg>
                                 </div>
                                 <div className="feature__content">
-                                    <h4><a className="hover-link" href="page-service-details.html">Punctual Service
-                                        Delivery</a></h4>
-                                    <p>Punctual Service Delivery
-                                        We specialize in serving industries like healthcare, finance customized
-                                        solutions
-                                        tailored to their unique needs.</p>
+                                    <h4>
+                                        <span className="hover-link">
+                                            Tailored Solutions, Measurable Impact
+                                        </span>
+                                    </h4>
+                                    <p>
+                                        Our blend of expertise, innovation and client - centric approach ensures we create value and drive measurable impact for your organization.
+                                    </p>
                                 </div>
-                                <a href="page-service-details.html" className="readMore-btn">Read More <i
-                                    className="fa-light fa-arrow-right"></i></a>
+                                <Link href="/services" className="readMore-btn">Read More <i
+                                    className="fa-light fa-arrow-right"></i>
+                                </Link>
                             </div>
                         </div>
                         <div className="col-lg-6 col-xl-4 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -69,15 +73,17 @@ export default function WhyChooseUs() {
                                     </svg>
                                 </div>
                                 <div className="feature__content">
-                                    <h4><a className="hover-link" href="page-service-details.html">Cutting-Edge
-                                        Technology</a></h4>
-                                    <p>We focus on key sectors like healthcare, finance, and manufacturing, crafting
-                                        bespoke
-                                        solutions tailored to address
-                                        their distinct challenges."</p>
+                                    <h4>
+                                        <span className="hover-link">
+                                            Your Trusted Partner for Growth
+                                        </span>
+                                    </h4>
+                                    <p>
+                                        We go beyond advice- by combining industry expertise with a result-driven mindset Briie Consulting helps you navigate challenges,seize opportunities, and achieve sustainable growth
+                                    </p>
                                 </div>
-                                <a href="page-service-details.html" className="readMore-btn">Read More <i
-                                    className="fa-light fa-arrow-right"></i></a>
+                                <Link href="/services" className="readMore-btn">Read More <i
+                                    className="fa-light fa-arrow-right"></i></Link>
                             </div>
                         </div>
                         <div className="col-lg-6 col-xl-4 wow fadeInLeft" data-wow-delay="400ms" data-wow-duration="1500ms">
@@ -104,24 +110,26 @@ export default function WhyChooseUs() {
                                     </svg>
                                 </div>
                                 <div className="feature__content">
-                                    <h4><a className="hover-link" href="page-service-details.html">Manage Investment</a>
+                                    <h4>
+                                        <span className="hover-link">
+                                            Dedicated Professionals, Committed to your success
+                                        </span>
                                     </h4>
-                                    <p>We cater to industries like healthcare, finance, and manufacturing, crafting
-                                        bespoke
-                                        solutions uniquely tailored to
-                                        address their distinct challenges.</p>
+                                    <p>
+                                        With Briie Consulting, you'll have a team of experts fully dedicated to creating value for your organization.
+                                    </p>
                                 </div>
-                                <a href="page-service-details.html" className="readMore-btn">Read More <i
-                                    className="fa-light fa-arrow-right"></i></a>
+                                <Link href="/services" className="readMore-btn">Read More <i
+                                    className="fa-light fa-arrow-right"></i></Link>
                             </div>
                         </div>
                     </div>
-                    <div className="feature-two__text mt-50 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                    {/* <div className="feature-two__text mt-50 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <img src="images/icon/users.png" alt="image" />
                         <p>Save your precious time and effort spent for finding a solution. <a href="contact.html">
                             Contact Us
                             Now</a></p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

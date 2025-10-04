@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 type Props = {}
@@ -15,9 +16,9 @@ export default function Footer({}: Props) {
                     <div className="row g-5">
                         <div className="col-sm-6 col-xl-3">
                             <div className="footer-two__item">
-                                <a href="index.html" className="logo">
-                                    <img src="images/logo/logo-light.png" alt="logo" />
-                                </a>
+                                <Link href="/" className="logo">
+                                    <img src="/brand-light.png" width={200} alt="logo" />
+                                </Link>
                             </div>
                         </div>
                         <div className="col-sm-6 col-xl-5">

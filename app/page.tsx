@@ -17,11 +17,11 @@ export default function Page() {
     <>
       <HeroSection />
       <AboutUsSection/>
-      <OurClients/>
-      <OurServices />
-      <FAQ />
       <WhyChooseUs />
+      <OurServices />
       <HomeBlogSection />
+      <OurClients/>
+      {/* <FAQ /> */}
     </>
   )
 }

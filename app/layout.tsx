@@ -4,6 +4,7 @@ import "./globals.css";
 import TopHeader from "@/components/TopHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Providers from "@/components/Providers";
 
 export const metadata: Metadata = {
   title: "Briie Consulting",
@@ -30,12 +31,14 @@ export default function RootLayout({
         <link rel="stylesheet" href="/css/style.css" />
       </head>
       <body>
-        {/* <TopHeader /> */}
-        <Header />
-        <main>
-          {children}
-        </main>
-        <Footer/>
+        <Providers>
+          {/* <TopHeader /> */}
+          <Header />
+          <main>
+            {children}
+          </main>
+        </Providers>
+        <Footer />
         <Script src="/js/jquery-3.7.1.min.js" strategy="beforeInteractive" />
         <Script src="/js/bootstrap.min.js" strategy="afterInteractive" />
         <Script src="/js/meanmenu.js" strategy="afterInteractive" />
