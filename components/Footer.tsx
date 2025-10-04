@@ -26,11 +26,11 @@ export default function Footer({}: Props) {
                                 <h4 className="title">Address</h4>
                                 <ul>
                                     <li>
-                                        <h4 className="adress-text"><a href="#0">2464 Royal Ln. Mesa, New Jersey 45463</a>
+                                        <h4 className="adress-text"><a href="#0">No 7, 6th Avenue Gwarinpa, Abuja</a>
                                         </h4>
                                     </li>
                                     <li>
-                                        <h4 className="adress-text"><a href="#0">(000) 222-0000</a></h4>
+                                        <h4 className="adress-text"><a href="tel:+2349063504256">+234 9063504256</a></h4>
                                     </li>
                                 </ul>
                             </div>
@@ -39,16 +39,16 @@ export default function Footer({}: Props) {
                             <div className="footer-two__item">
                                 <h4 className="title">Useful Links</h4>
                                 <ul>
-                                    <li><a href="#0">About</a></li>
-                                    <li><a href="#0">Services</a></li>
-                                    <li><a href="#0">Blog</a></li>
-                                    <li><a href="#0">Contact</a></li>
+                                    <li><Link href="/about">About</Link></li>
+                                    <li><Link href="/services">Services</Link></li>
+                                    <li><Link href="/blog">Blog</Link></li>
+                                    <li><Link href="/contact">Contact</Link></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col-sm-6 col-xl-2">
                             <div className="footer-two__item">
-                                <h4 className="title">Support</h4>
+                                <h4 className="title">Browse</h4>
                                 <ul>
                                     <li><a href="#0">FAQS</a></li>
                                     <li><a href="#0">Term & Conditions</a></li>
@@ -61,12 +61,12 @@ export default function Footer({}: Props) {
                 </div>
                 <div className="footer-two__bottom">
                     <div className="socials">
-                        <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
+                        {/* <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
                         <a href="#"><i className="fa fa-x"></i></a>
                         <a href="#"><i className="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i className="fa-brands fa-linkedin-in"></i></a> */}
                     </div>
-                    <p className="text">&copy; 2025 Stratify is Proudly Powered by <a href="#0">ThemeMascot</a></p>
+                    <p className="text">&copy; 2025 <a href="/">Briie</a></p>
                 </div>
             </div>
         </div>

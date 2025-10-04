@@ -5,6 +5,7 @@ import TopHeader from "@/components/TopHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Providers from "@/components/Providers";
+import MobileNav from "@/components/MobileNav";
 
 export const metadata: Metadata = {
   title: "Briie Consulting",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Providers>
           {/* <TopHeader /> */}
           <Header />
+          <MobileNav />
           <main>
             {children}
           </main>
