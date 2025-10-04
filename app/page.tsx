@@ -1,27 +1,20 @@
-'use client'
+import HomePageMain from "@/components/homepage";
+import { getBlogPosts } from "@/utils/queries/blog.query";
+import { getServices } from "@/utils/queries/services.query";
+import { createClient } from "@/prismicio";
+import React from "react";
 
-import React from 'react'
-import { useTemplateScripts } from '../hooks/useTemplateScripts'
-import HeroSection from '@/components/HeroSection';
-import OurServices from '@/components/OurServices';
-import FAQ from '@/components/FAQ';
-import AboutUsSection from '@/components/AboutUsSection';
-import OurClients from '@/components/OurClients';
-import WhyChooseUs from '@/components/WhyChooseUs';
-import HomeBlogSection from '@/components/HomeBlogSection';
+const page = async () => {
+    const client = createClient();
+    const all = Promise.all([getServices(client), getBlogPosts(client, 4, 1)]);
+    const [services, blogPosts] = await all;
 
-export default function Page() {
-  useTemplateScripts();
+    return (
+        <HomePageMain
+            services={services.services}
+            blogPosts={blogPosts.blogPosts}
+        />
+    );
+};
 
-  return (
-    <>
-      <HeroSection />
-      <AboutUsSection/>
-      <WhyChooseUs />
-      <OurServices />
-      <HomeBlogSection />
-      <OurClients/>
-      {/* <FAQ /> */}
-    </>
-  )
-}
+export default page;
