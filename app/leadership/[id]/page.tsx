@@ -96,7 +96,7 @@ export default async function page({ params }: PageProps) {
                     <div className='team-five__wrp'>
                         <div className='team-details__top pb-70'>
                             <div className='row align-items-lg-center'>
-                                <div className='col-xl-6 col-lg-6'>
+                                <div className='col-xl-6 col-lg-6' style={{ alignSelf: "baseline" }}>
                                     <div className='team-details__top-left'>
                                         <div className='team-details__top-img'>
                                             {" "}
