@@ -154,3 +154,16 @@ export const getBlogByCategory = async (client: prismic.Client<AllDocumentTypes>
         };
     }
 };
+
+
+export const getBlogCategories = async (client: prismic.Client<AllDocumentTypes>, pageSize?: number, currentPage?: number) =>
+{
+    const categories = await client.getByType('categories');
+    return {
+        categories: categories.results,
+        totalPages: categories.total_pages,
+        currentPage: categories.page,
+    };
+};
+
+
