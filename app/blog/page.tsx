@@ -28,6 +28,7 @@ export default async function Page({ searchParams }: PageProps) {
         <>
             <PageHero
                 title='Blog'
+                imageURL={'/ai/blog.jpg'}
                 breadcrumb={[{ label: "Blog", href: "/blog" }]}
             />
             <section className='blog-area pt-130 pb-20'>

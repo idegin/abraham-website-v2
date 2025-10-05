@@ -80,6 +80,7 @@ export default async function page({ params }: PageProps) {
     return (
         <>
             <PageHero
+                imageURL={team.data.image.url || ""}
                 title={team.data.name || ""}
                 breadcrumb={[
                     { label: "Leadership", href: "/leadership" },
@@ -119,7 +120,7 @@ export default async function page({ params }: PageProps) {
                                                 I help my clients stand out and
                                                 they help me grow.
                                             </p>
-                                            <div className='team-details-contact mb-30'>
+                                            {team.data.email.text && <div className='team-details-contact mb-30'>
                                                 <h5 className='mb-0'>
                                                     Email Address
                                                 </h5>{" "}
@@ -137,7 +138,7 @@ export default async function page({ params }: PageProps) {
                                                         </Link>
                                                     </span>
                                                 </div>
-                                            </div>
+                                            </div>}
                                             {team.data.phone_number && (
                                                 <div className='team-details-contact mb-30'>
                                                     <h5 className='mb-0'>

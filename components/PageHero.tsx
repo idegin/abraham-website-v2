@@ -3,17 +3,18 @@ import React from "react";
 
 type Props = {
     title: string;
+    imageURL?: string;
     breadcrumb: {
         label: string;
         href: string;
     }[];
 };
 
-export default function PageHero({ title, breadcrumb }: Props) {
+export default function PageHero({title, breadcrumb, imageURL}: Props) {
     return (
         <section
             className='breadcrumb-area'
-            data-background='/images/banner/banner-inner.jpg'
+            data-background={imageURL || '/images/banner/banner-inner.jpg'}
         >
             <div className='container'>
                 <div className='breadcrumb__wrp'>

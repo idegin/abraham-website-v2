@@ -15,11 +15,11 @@ function BlogContent({ blogDetails }: { blogDetails: BlogPostsDocument }) {
     return (
         <div className='blog-details__content'>
             <ul className='list-unstyled blog-details__meta'>
-                <li>
-                    <a href='#0'>
-                        <i className='fas fa-user-circle'></i> {author?.name}
-                    </a>
-                </li>
+                {/*<li>*/}
+                {/*    <a href='#0'>*/}
+                {/*        <i className='fas fa-user-circle'></i> {author?.name}*/}
+                {/*    </a>*/}
+                {/*</li>*/}
                 {/* <li>
                     <a href='news-details.html'>
                         <i className='fas fa-comments'></i> {blogDetails?.data?.comments?.length} Comments
