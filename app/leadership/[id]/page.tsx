@@ -154,7 +154,7 @@ export default async function page({ params }: PageProps) {
                                                     </div>
                                                 </div>
                                             )}
-                                            {team.data.web_address && (
+                                            {team.data.web_address.text && (
                                                 <div className='team-details-contact'>
                                                     <h5 className='mb-0'>
                                                         Web Address
