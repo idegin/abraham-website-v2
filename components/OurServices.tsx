@@ -14,7 +14,10 @@ export default function OurServices({ services }: OurServicesProps) {
         setActiveService(service);
     };
     return (
-        <section className='hzAccordion-area pt-130 pb-130'>
+        <section
+            style={{ overflow: "auto" }}
+            className='hzAccordion-area pt-130 pb-130'
+        >
             <div className='container'>
                 <div className='section-header mb-60'>
                     <h2 className='wow splt-txt text-white' data-splitting>
@@ -57,6 +60,10 @@ export default function OurServices({ services }: OurServicesProps) {
                                         <img
                                             src='images/shape/hz-accordion-shape.png'
                                             alt='shape'
+                                            height={100}
+                                            style={{
+                                                height: "150px",
+                                            }}
                                         />
                                     </div>
                                     <div className='image'>
