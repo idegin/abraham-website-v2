@@ -24,6 +24,7 @@ export default function OurServices({ services }: OurServicesProps) {
                 <div className='hzAccordion__wrp'>
                     {services.map((service, index) => (
                         <div
+                            key={`service-${service.uid}`}
                             className={`hzAccordion__item  wow fadeInLeft ${activeService?.uid === service.uid ? "active" : ""}`}
                             data-wow-delay='00ms'
                             data-wow-duration='1500ms'
