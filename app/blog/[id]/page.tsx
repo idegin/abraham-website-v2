@@ -102,6 +102,7 @@ export default async function Page({ params }: PageProps) {
         <>
             <PageHero
                 title={blogDetails?.blogPost?.data?.title || ""}
+                imageURL={blogDetails?.blogPost.data.featured_image.url || ""}
                 breadcrumb={[
                     {
                         label: "Blog",

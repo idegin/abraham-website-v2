@@ -5,6 +5,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
 import { Metadata } from "next";
+import { PrismicRichText } from "@prismicio/react";
 
 interface PageProps {
     params: Promise<{
@@ -80,6 +81,7 @@ export default async function page({ params }: PageProps) {
     return (
         <>
             <PageHero
+                imageURL={team.data.image.url || ""}
                 title={team.data.name || ""}
                 breadcrumb={[
                     { label: "Leadership", href: "/leadership" },
@@ -116,28 +118,34 @@ export default async function page({ params }: PageProps) {
                                                 {team.data.designation}
                                             </p>
                                             <p className='team-details__top-text-1 mt-5'>
-                                                I help my clients stand out and
-                                                they help me grow.
+                                                <PrismicRichText
+                                                    field={
+                                                        team.data.description
+                                                    }
+                                                />
                                             </p>
-                                            <div className='team-details-contact mb-30'>
-                                                <h5 className='mb-0'>
-                                                    Email Address
-                                                </h5>{" "}
-                                                <div className=''>
-                                                    <span>
-                                                        <Link
-                                                            href={`mailto:${team.data.email.text}`}
-                                                            className='__cf_email__'
-                                                            // data-cfemail='87e9e2e2e3efe2ebf7c7fee8f2f5e3e8eae6eee9a9e4e8ea'
-                                                        >
-                                                            {
-                                                                team.data.email
-                                                                    .text
-                                                            }
-                                                        </Link>
-                                                    </span>
+                                            {team.data.email.text && (
+                                                <div className='team-details-contact mb-30'>
+                                                    <h5 className='mb-0'>
+                                                        Email Address
+                                                    </h5>{" "}
+                                                    <div className=''>
+                                                        <span>
+                                                            <Link
+                                                                href={`mailto:${team.data.email.text}`}
+                                                                className='__cf_email__'
+                                                                // data-cfemail='87e9e2e2e3efe2ebf7c7fee8f2f5e3e8eae6eee9a9e4e8ea'
+                                                            >
+                                                                {
+                                                                    team.data
+                                                                        .email
+                                                                        .text
+                                                                }
+                                                            </Link>
+                                                        </span>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            )}
                                             {team.data.phone_number && (
                                                 <div className='team-details-contact mb-30'>
                                                     <h5 className='mb-0'>
@@ -170,70 +178,73 @@ export default async function page({ params }: PageProps) {
                                                 </div>
                                             )}
                                             <div className='team-details__social'>
-                                                {team?.data?.social_medial_links?.map(
-                                                    (social, index) => (
-                                                        <React.Fragment
-                                                            key={index}
-                                                        >
-                                                            {social.linkedin
-                                                                ?.text && (
-                                                                <a
-                                                                    href={
-                                                                        social
-                                                                            .linkedin
-                                                                            .text
-                                                                    }
-                                                                    target='_blank'
-                                                                    rel='noopener noreferrer'
-                                                                >
-                                                                    <i className='fab fa-linkedin'></i>
-                                                                </a>
-                                                            )}
-                                                            {social.twitter
-                                                                ?.text && (
-                                                                <a
-                                                                    href={
-                                                                        social
-                                                                            .twitter
-                                                                            .text
-                                                                    }
-                                                                    target='_blank'
-                                                                    rel='noopener noreferrer'
-                                                                >
-                                                                    <i className='fab fa-twitter'></i>
-                                                                </a>
-                                                            )}
-                                                            {social.facebook
-                                                                ?.text && (
-                                                                <a
-                                                                    href={
-                                                                        social
-                                                                            .facebook
-                                                                            .text
-                                                                    }
-                                                                    target='_blank'
-                                                                    rel='noopener noreferrer'
-                                                                >
-                                                                    <i className='fab fa-facebook'></i>
-                                                                </a>
-                                                            )}
-                                                            {social.instagram
-                                                                ?.text && (
-                                                                <a
-                                                                    href={
-                                                                        social
-                                                                            .instagram
-                                                                            .text
-                                                                    }
-                                                                    target='_blank'
-                                                                    rel='noopener noreferrer'
-                                                                >
-                                                                    <i className='fab fa-instagram'></i>
-                                                                </a>
-                                                            )}
-                                                        </React.Fragment>
-                                                    )
-                                                )}
+                                                {team?.data
+                                                    ?.social_medial_links &&
+                                                    team?.data?.social_medial_links?.map(
+                                                        (social, index) => (
+                                                            <React.Fragment
+                                                                key={index}
+                                                            >
+                                                                {social.linkedin
+                                                                    ?.text && (
+                                                                    <a
+                                                                        href={
+                                                                            social
+                                                                                .linkedin
+                                                                                .text
+                                                                        }
+                                                                        target='_blank'
+                                                                        rel='noopener noreferrer'
+                                                                    >
+                                                                        <i className='fab fa-linkedin'></i>
+                                                                    </a>
+                                                                )}
+                                                                {social.twitter
+                                                                    ?.text && (
+                                                                    <a
+                                                                        href={
+                                                                            social
+                                                                                .twitter
+                                                                                .text
+                                                                        }
+                                                                        target='_blank'
+                                                                        rel='noopener noreferrer'
+                                                                    >
+                                                                        <i className='fab fa-twitter'></i>
+                                                                    </a>
+                                                                )}
+                                                                {social.facebook
+                                                                    ?.text && (
+                                                                    <a
+                                                                        href={
+                                                                            social
+                                                                                .facebook
+                                                                                .text
+                                                                        }
+                                                                        target='_blank'
+                                                                        rel='noopener noreferrer'
+                                                                    >
+                                                                        <i className='fab fa-facebook'></i>
+                                                                    </a>
+                                                                )}
+                                                                {social
+                                                                    .instagram
+                                                                    ?.text && (
+                                                                    <a
+                                                                        href={
+                                                                            social
+                                                                                .instagram
+                                                                                .text
+                                                                        }
+                                                                        target='_blank'
+                                                                        rel='noopener noreferrer'
+                                                                    >
+                                                                        <i className='fab fa-instagram'></i>
+                                                                    </a>
+                                                                )}
+                                                            </React.Fragment>
+                                                        )
+                                                    )}
                                             </div>
                                         </div>
                                     </div>

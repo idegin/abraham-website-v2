@@ -132,7 +132,7 @@ function BlogSidebar({ relatedPosts, categories, activeCategory }: Props) {
     return (
         <div className='col-xl-4 col-lg-5'>
             <div className='sidebar'>
-                <SidebarSearch />
+                {/*<SidebarSearch />*/}
                 <SidebarPosts relatedPosts={relatedPosts} />
                 <SidebarCategories
                     categories={categories}

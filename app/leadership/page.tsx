@@ -10,6 +10,7 @@ export default async function page() {
     return (
         <>
             <PageHero
+                imageURL={'/ai/leadership.jpg'}
                 title='Leadership'
                 breadcrumb={[{ label: "Leadership", href: "/leadership" }]}
             />
