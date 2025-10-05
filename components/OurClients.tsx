@@ -50,10 +50,10 @@ export default function OurClients({ }: Props) {
                     {/*    <img src="images/brand/brand-six-image10.png" alt="image" />*/}
                     {/*</a>*/}
                 </div>
-                <div className="brand-six__text mt-50">
-                    <h5 className="text">2.6k Companies and Individuals Have Trusted Us. <a href="#0"
-                        className="hover-link">View All Clients <i className="fa-solid fa-chevron-right"></i></a></h5>
-                </div>
+                {/*<div className="brand-six__text mt-50">*/}
+                {/*    <h5 className="text">2.6k Companies and Individuals Have Trusted Us. <a href="#0"*/}
+                {/*        className="hover-link">View All Clients <i className="fa-solid fa-chevron-right"></i></a></h5>*/}
+                {/*</div>*/}
             </div>
         </section>
     )
