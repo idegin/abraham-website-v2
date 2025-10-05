@@ -72,6 +72,7 @@ export default function OurServices({ services }: OurServicesProps) {
                                                 service.data.title ||
                                                 ""
                                             }
+                                            style={{ maxHeight: '43rem' }}
                                         />
                                     </div>
                                 </div>
