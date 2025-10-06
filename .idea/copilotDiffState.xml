@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/app/globals.css">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/globals.css" />
+              <option name="originalContent" value="&#10;.client-image {&#10;&#10;}&#10;" />
+              <option name="updatedContent" value=".client-image {&#10;  width: 100px; /* Mobile width */&#10;  object-fit: contain;&#10;}&#10;&#10;/* Desktop width */&#10;@media (min-width: 768px) {&#10;  .client-image {&#10;    width: 150px;&#10;  }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

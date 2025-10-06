@@ -14,28 +14,28 @@ export default function OurClients({ }: Props) {
                 </div>
                 <div className="brand-six__wrp">
                     <a href="#0" className="brand-six__item">
-                        <Image src="/clients/afdb.png" alt="image" width={200} height={100} />
+                        <img src="/clients/afdb.png" alt="image" className="client-image" />
                     </a>
                     <a href="#0" className="brand-six__item">
-                        <Image src="/clients/environment.png" alt="image" width={150} height={100} />
+                        <img src="/clients/environment.png" alt="image" className="client-image" />
                     </a>
                     <a href="#0" className="brand-six__item">
-                        <Image src="/clients/naseni.png" alt="image" width={150} height={100} />
+                        <img src="/clients/naseni.png" alt="image" className="client-image" />
                     </a>
                     <a href="#0" className="brand-six__item">
-                        <Image src="/clients/nnpc.png" alt="image" width={150} height={90} />
+                        <img src="/clients/nnpc.png" alt="image" className="client-image" />
                     </a>
                     <a href="#0" className="brand-six__item">
-                        <Image src="/clients/sokoto.png" alt="image" width={150} height={120} />
+                        <img src="/clients/sokoto.png" alt="image" className="client-image" />
                     </a>
                     <a href="#0" className="brand-six__item">
-                        <Image src="/clients/water.png" alt="image" width={150} height={120} />
+                        <img src="/clients/water.png" alt="image" className="client-image" />
                     </a>
                 </div>
 
                 <div className="brand-six__wrp wrp-bottom">
                     <a href="#0" className="brand-six__item">
-                        <Image src="/clients/worldbank.png" alt="image" width={200} height={120} />
+                        <img src="/clients/worldbank.png" alt="image" className="client-image" />
                     </a>
                     {/*<a href="#0" className="brand-six__item">*/}
                     {/*    <img src="images/brand/brand-six-image7.png" alt="image" />*/}
@@ -55,6 +55,8 @@ export default function OurClients({ }: Props) {
                 {/*        className="hover-link">View All Clients <i className="fa-solid fa-chevron-right"></i></a></h5>*/}
                 {/*</div>*/}
             </div>
+            <br />
+            <br />
         </section>
     )
 }
