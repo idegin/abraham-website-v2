@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="/images/favicon.png" />
+        <link rel="shortcut icon" href="./favicon.ico" />
         <link rel="stylesheet" href="/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/css/meanmenu.css" />
         <link rel="stylesheet" href="/css/all.min.css" />
