@@ -137,10 +137,11 @@ const EachServicesDetailsSection = ({
             <div
                 className={`col-lg-6 ${reversed ? "order-2 order-lg-1" : "order-1 order-lg-2"}`}
             >
-                <div className='choose-seven__image'>
+                <div className='choose-seven__image' style={{ maxHeight: "600px", overflow: "hidden" }}>
                     <img
                         src={subService?.image.url || ""}
                         alt={subService?.image.alt || ""}
+                        style={{ objectFit: "cover" }}
                     />
                 </div>
             </div>
