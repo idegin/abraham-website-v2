@@ -10,7 +10,7 @@ export default async function page() {
     return (
         <>
             <PageHero
-                imageURL={'/ai/leadership.jpg'}
+                imageURL={'https://cdn.pixabay.com/photo/2020/01/26/10/33/chess-4794265_1280.jpg'}
                 title='Leadership'
                 breadcrumb={[{ label: "Leadership", href: "/leadership" }]}
             />
@@ -26,7 +26,7 @@ export default async function page() {
                                     data-wow-duration='1500ms'
                                 >
                                     <div className='team__item'>
-                                        <div className='team__image'>
+                                        <div className='team__image' style={{ height: '35rem'}}>
                                             <img
                                                 src={team.data.image.url || ""}
                                                 alt={
@@ -34,6 +34,7 @@ export default async function page() {
                                                     team.data.name ||
                                                     ""
                                                 }
+                                                style={{ objectFit: 'cover', height: '100%', width: '100%', filter: 'grayscale(80%)' }}
                                             />
                                         </div>
                                         <h4>
